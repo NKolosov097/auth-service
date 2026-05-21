@@ -66,6 +66,7 @@ func New(
 
 func (h *Handler) Router() http.Handler {
 	r := chi.NewRouter()
+	r.Use(NewCORSMiddleware())
 	r.Use(middleware.RequestID)
 	r.Use(middleware.RealIP)
 	r.Use(middleware.Recoverer)
