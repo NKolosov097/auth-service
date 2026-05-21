@@ -28,3 +28,6 @@ Thumbs.db
 
 # Go
 vendor/
+
+# env
+.env
